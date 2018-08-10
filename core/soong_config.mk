@@ -223,6 +223,10 @@ $(call add_json_bool, EnforceProductPartitionInterface,  $(PRODUCT_ENFORCE_PRODU
 
 $(call add_json_bool, InstallExtraFlattenedApexes, $(PRODUCT_INSTALL_EXTRA_FLATTENED_APEXES))
 
+include vendor/derp/build/soong/soong_config.mk
+
+_contents := $(subst $(comma)$(newline)__SV_END,$(newline),$(_contents)__SV_END}$(newline))
+
 $(call add_json_bool, BoardUsesRecoveryAsBoot, $(BOARD_USES_RECOVERY_AS_BOOT))
 
 include vendor/derp/build/soong/soong_config.mk
