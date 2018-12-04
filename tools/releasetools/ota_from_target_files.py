@@ -821,6 +821,29 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   # Dump fingerprints
   script.Print("Target: {}".format(target_info.fingerprint))
+  cafrev = target_info.GetBuildProp("ro.caf.revision")
+  date = target_info.GetBuildProp("ro.build.date")
+  version = target_info.GetBuildProp("ro.derp.version")
+
+  if target_info.GetBuildProp("ro.product.model") is not None:
+    model = target_info.GetBuildProp("ro.product.model")
+    script.Print("***********************************************");
+    script.Print("         DERP-CAF for %s"%(model));
+    script.Print("   Version: %s"%(version));
+    script.Print("   CAF Revision: %s"%(cafrev));
+    script.Print("   Compiled on: %s"%(date));
+    script.Print("   404 system not found, your device now derped!");
+    script.Print("***********************************************");
+  else:
+    name = target_info.GetBuildProp("ro.product.name")
+    script.Print("***********************************************");
+    script.Print("           DERP-CAF for %s"%(name));
+    script.Print("   Version: %s"%(version));
+    script.Print("   CAF Revision: %s"%(cafrev));
+    script.Print("   Compiled on: %s"%(date));
+    script.Print("   404 system not found, your device now derped!");
+    script.Print("***********************************************");
+
 
   device_specific.FullOTA_InstallBegin()
 
