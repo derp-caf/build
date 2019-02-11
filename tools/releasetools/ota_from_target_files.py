@@ -833,6 +833,15 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.Print("   CAF Revision: %s"%(cafrev));
     script.Print("   Compiled on: %s"%(date));
     script.Print("   404 system not found, your device is now Derped!");
+    script.Print("           *****  ****** ****   ****      ");
+    script.Print("           *    * *      *   *  *   *     ");
+    script.Print("           *    * *****  ****   ****      ");
+    script.Print("           *    * *      *   *  *         ");
+    script.Print("           *****  ****** *    * *         ");
+    script.Print("                ***    *    ****          ");
+    script.Print("               *      * *   *             ");
+    script.Print("               *     *****  ****          ");
+    script.Print("                *** *     * *             ");
     script.Print("***********************************************");
   else:
     name = target_info.GetBuildProp("ro.product.name")
@@ -842,6 +851,15 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.Print("   CAF Revision: %s"%(cafrev));
     script.Print("   Compiled on: %s"%(date));
     script.Print("   404 system not found, your device is now Derped!");
+    script.Print("           *****  ****** ****   ****      ");
+    script.Print("           *    * *      *   *  *   *     ");
+    script.Print("           *    * *****  ****   ****      ");
+    script.Print("           *    * *      *   *  *         ");
+    script.Print("           *****  ****** *    * *         ");
+    script.Print("                ***    *    ****          ");
+    script.Print("               *      * *   *             ");
+    script.Print("               *     *****  ****          ");
+    script.Print("                *** *     * *             ");
     script.Print("***********************************************");
 
 
